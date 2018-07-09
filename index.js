@@ -26,8 +26,8 @@ server.httpServer = http.createServer(function(req,res) {
 
 /**
  * Handdler for all paths
- * @param {} req 
- * @param {*} res 
+ * @param { User request object } req 
+ * @param { Server response object } res 
  */
 server.urlPath = function (req,res) {
 
@@ -63,6 +63,9 @@ server.urlPath = function (req,res) {
     res.end(JSON.stringify(body));
 }
 
+/**
+ * Server listen
+ */
 server.httpServer.listen(httpPort, function() {
     console.log(`Server listenning on port ${httpPort}`);
 });
